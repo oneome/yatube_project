@@ -13,7 +13,7 @@
     <meta name="theme-color" content="#ffffff">
     <!-- Подключен файл со стандартными стилями бустрап -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <title>{% block main_title_head %} 404 Страница не найдена {% endblock main_title_head %}</title>
+    <title> {{ title }}</title>
   </head>
   <body>
     <header>
@@ -22,27 +22,10 @@
     <main>
         <!-- класс py-5 создает отступы сверху и снизу блока -->
       <div class="container py-5">
-        <h1>{% block main_title %} {% endblock main_title %}</h1>
-        {% block second_title %}{% endblock second_title %}
-        <article>
-          {% block first_text %}
-          {% endblock first_text %}
-        </article>
-        <hr>
-        <article>
-          {% block second_text %}
-          {% endblock second_text %}          
-        </article>
-        <hr>
-        <article>
-          {% block third_text %}
-          {% endblock third_text %}
-        </article>
+        {{ text }}
         <!-- под последним постом нет линии -->
       </div>  
     </main>
-    <footer class="page-footer font-small blue border-top">
-        {% include 'includes/footer.html' %}    
-    </footer>
+    {% include 'includes/footer.html' %}    
   </body>
 </html>
