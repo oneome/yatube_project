@@ -31,7 +31,7 @@ source venv/bin/activate
 python -m venv venv
 ```
 ```
-venv/scripts/activate
+. venv/scripts/activate
 ```
 Обновить pip
 ```
